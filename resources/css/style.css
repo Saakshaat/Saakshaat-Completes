@@ -183,3 +183,10 @@ ul.todo li .buttons button svg{
 .complete{
   border-radius: 45%;
 }
+
+@media only screen and (max-device-width: 480px) {
+  body{
+    width: 100%;
+    float: none;
+  }
+}
