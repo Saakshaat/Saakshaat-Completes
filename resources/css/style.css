@@ -27,7 +27,7 @@ header {
   left: 0;
   z-index: 5;
 
-  background: #25b99a;
+  background: #1AC68D;
   box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -55,6 +55,7 @@ header input {
 header input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
   font-weight: 500;
+  animation: backwards;
 }
 
 header input:-moz-input-placeholder {
@@ -247,14 +248,14 @@ ul.todo#completed li .buttons button.complete svg .fill{
   fill:#fff;
 }
 
-ul.todo#completed:not(:empty){
+ul.todo#completed {
   opacity:0.5;
   padding-top: 60px;
   position: relative;
 }
 
 /* this is the line between to-do and completed */
-ul.todo#completed:not(:empty):before{
+ul.todo#completed:before {
   width: 150px;
   height: 1px;
   background: #444;
@@ -263,4 +264,22 @@ ul.todo#completed:not(:empty):before{
   top:30px;
   left: 50%;
   margin: 0 0 0 -75px;
+}
+
+ul.todo#to-do:empty:after{
+  content: 'You have nothing to do';
+}
+
+ul.todo#completed:empty:after{
+  content: 'You are yet to begin your day';
+}
+
+ul.todo#completed:after,
+ul.todo#to-do:after{
+  width:100%;
+  display: block;
+  text-align: center;
+  /* NOTE
+  YOU CAN ONLY USE TEXT-ALIGN ON BLOCK ELEMENTS */
+  font-size:14PX;
 }
