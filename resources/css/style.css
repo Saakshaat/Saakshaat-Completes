@@ -242,7 +242,7 @@ ul.todo#completed {
 ul.todo#completed:before {
   width: 150px;
   height: 1px;
-  background: #444;
+  background: #fff;
   position: absolute;
   content: '';
   top:30px;
