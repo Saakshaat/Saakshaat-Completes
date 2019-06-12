@@ -125,7 +125,6 @@ ul.todo {
 }
 
 ul.todo li {
-    list-style: none;
   width: 100%;
   min-height: 50px;
   float: left;
@@ -135,9 +134,9 @@ ul.todo li {
   line-height: 22px;
 
   background: black;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  border-radius: 8px;
+  position: relative;;
+  box-shadow: 0px 1px 2px rgba(28, 35, 42, 0.1);
   margin: 0 0 10px 0;
   padding: 14px 100px 14px 14px;
   word-break: break-word;
@@ -148,7 +147,7 @@ ul.todo li:last-of-type {
 }
 
 ul.todo li .buttons {
-  width: 100px;
+  width: 111px;
   height: 50px;
 
   position: absolute;
@@ -157,30 +156,31 @@ ul.todo li .buttons {
 }
 
 ul.todo li .buttons button {
-  width: 50px;
+  width: 33px;
   height: 50px;
   float: left;
   background: none;
   position: relative;
   border: 0px;
-  box-shadow: none;
   outline: none;
+  display: block;
   cursor: pointer;
-
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-ul.todo li .buttons button:last-of-type:before {
+
+/* ul.todo li .buttons button:last-of-type:before {
   content: '';
-  width: 1px;
+  width:1px;
   height: 30px;
   background: #edf0f1;
 
   position: absolute;
   top: 10px;
   left: 0;
-}
+} */
 
 ul.todo li .buttons button svg{
     width: 22px;
@@ -235,20 +235,24 @@ ul.todo#completed li .buttons button.complete svg .fill{
 /* this is for the important button */
 ul.todo li .buttons button.important svg {
   transition: fill 0.3s ease-in-out;
-  margin-left: -54px;
 }
 
 ul.todo li .buttons button.important svg .fill{
-  fill: #D6C413;
+  fill: rgb(184, 187, 8);
 }
 
-ul.todo li.button button.important:hover svg .fill{
-  fill: #1AC68D;
+ul.todo li .buttons button.important:hover svg .fill{
+  fill: rgba(20, 179, 20, 0.637);
 }
 
-.madeImp{
+/* ul.todo#completed li .buttons button.important svg .fill{
+  fill:black;
+} */
+
+.makeRed{
   fill: red;
 }
+
 /*  */
 
 ul.todo#completed {
