@@ -38,9 +38,10 @@ header input {
   height: 50px;
   float: left;
   color: #fff;
-  font-size: 15px;
-  font-weight: 900;
-  text-indent: 18px;
+  font-size: 20px;
+  font-family: 'Oleo Script', cursive;
+  font-weight: 600;
+  text-indent: 16px;
   padding: 0 60px 0 0;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px 25px 25px 5px;
@@ -54,7 +55,8 @@ header input {
 
 header input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
+  font-family: 'Oleo Script', cursive;
+  font-weight: 700;
   animation: backwards;
 }
 
@@ -144,7 +146,7 @@ ul.todo li {
 }
 
 ul.todo#to-do li:hover{
-  z-index: 50px;
+  z-index:40;
   box-shadow: 0 0 5px 5px rgb(34, 34, 34);
 }
 
@@ -280,15 +282,24 @@ ul.todo#completed:before {
   margin: 0 0 0 -75px;
 }
 
-ul.todo#to-do:empty:after{
+.emptyMsgTodo{
   content:'No Tasks at Hand';
   margin-top:20px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
 }
 
-ul.todo#completed:empty:after{
+.emptyMsgCompleted{
   content: 'Yet to Complete Tasks';
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
 }
-
 ul.todo#to-do:after,
 ul.todo#completed:after {
   width: 100%;
