@@ -140,6 +140,12 @@ ul.todo li {
   margin: 0 0 10px 0;
   padding: 14px 100px 14px 14px;
   word-break: break-word;
+  transition: 0.05s ease-in-out;
+}
+
+ul.todo#to-do li:hover{
+  z-index: 50px;
+  box-shadow: 0 0 5px 5px rgb(34, 34, 34);
 }
 
 ul.todo li:last-of-type {
