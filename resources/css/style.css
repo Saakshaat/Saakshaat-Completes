@@ -55,7 +55,7 @@ header input {
 
 header input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
-  font-family: 'Oleo Script', cursive;
+  font-family: 'Helvetica Nueve', Arial;
   font-weight: 700;
   animation: backwards;
 }
